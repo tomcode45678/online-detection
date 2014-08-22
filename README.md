@@ -1,6 +1,6 @@
 OnlineDetection-JavaScript
 ==========================
-Native JavaScript code detecting a users online/offline status. Cross domain compatible!
+Native JavaScript detecting a devices online/offline status. Cross domain compatible!
 
 Simply download the repository for an example and include the script into your project.
 
