@@ -17,7 +17,7 @@ If you include the JSON or even the JSONP file into your app because it is local
 
 ## How do I customise this to my website or application?
 
-Simple! Edit the functionality within the `online()` and `offline()` functions to send popup or warning messages to the user.
+Simple! Edit the functionality within the `online()` and `offline()` functions e.g. send/remove warning messages to the user.
 
 ## License?
 
