@@ -1,4 +1,4 @@
-OnlineDetection-JavaScript
+Online Detection with JavaScript
 ==========================
 Native JavaScript detecting a devices online/offline status. Cross domain compatible!
 
