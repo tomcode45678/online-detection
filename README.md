@@ -2,9 +2,9 @@ OnlineDetection-JavaScript
 ==========================
 Native JavaScript detecting a devices online/offline status. Cross domain compatible!
 
-Simply download the repository for an example and include the script into your project.
+- Simply download the repository for an example and include the script into your project.
 
-JSON and JSONP file examples are included.
+- JSON and JSONP file examples are included.
 
 ### Basic usage
 - Add both online-check.js file and json-example.json files
