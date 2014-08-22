@@ -1,25 +1,43 @@
 OnlineDetection-JavaScript
 ==========================
+Native JavaScript code detecting a users online/offline status. Cross domain compatible!
 
-**A native JavaScript example detecting a users online/offline status. Cross domain compatible!**
+Simply download the repository for an example and include the script into your project.
 
-Simply download the repository and include the script into your project.
+JSON and JSONP file examples are included.
 
-JSON and JSONP file examples are included. Hhowever, for cross domain XHTTP requests you will have to store the JSONP file online.
+### Basic usage
+- Add both online-check.js file and json-example.json files
+- Update the `online()` and `offline()` methods to suit your user
 
-## When to use the JSONP file?
+#### Optional Changes
+- Rename json-example.json
+- Update default url path to standard JSON file e.g. `var url = 'js/JSON/myonline.json'`
 
-If you are requesting a URL not within the online-check.js domain. For example a URL pointing to a CDN or if your project is a HTML5 mobile app.
+### Why use JSONP over JSON?
+If you are requesting a URL/JSON file **NOT** within the online-check.js domain location. 
 
-### HTML5 Mobile App
+For example a URL pointing to a CDN or if your project is a HTML5 mobile app. HTTP access control (CORS) prevents this. 
 
-If you include the JSON or even the JSONP file into your app because it is local it will register the connection and state the user is online when they could easily be offline.
+However, using JSONP the request calls a local function, in this case `online()` with a default JSON object added as a parameter.
 
-## How do I customise this to my website or application?
+#### Why I need to use JSONP in my HTML5 Mobile App?
 
-Simple! Edit the functionality within the `online()` and `offline()` functions e.g. send/remove warning messages to the user.
+If you include the JSON or even the JSONP file into your app it will be local and will return the user as constantly online. 
 
-## License?
+**Make sure you use the JSONP file and that it is hosted online!**
+
+#### Get JSONP working
+
+Remember to set `onlineCheck(false);` to `onlineCheck(true);`
+
+Oh and update the URL:
+
+    if (crossDomain === true) {
+        url = 'http://www.mylinktoJSONP.json';
+    }
+
+### License?
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004 
 
