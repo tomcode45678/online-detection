@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #00971B;
+}
+
+body.offline {
+    background: #970801;
+}
+
+h1#title {
+    font-size: 5em;
+    color: #FFF;
+    text-align: center;
+    margin: 20% auto;
+    text-transform: capitalize;
+}
