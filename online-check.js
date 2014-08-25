@@ -1,19 +1,10 @@
-/**
- * Created by Thomas Stapleton on 20/08/14.
- */
-
-// Additional global variables for online and offline functions
-var background;
-var title;
+// Created by Thomas Stapleton on 20/08/14.
 
 /**
  * When the DOM has loaded
  */
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
-        // Setting additional global variables
-        background = document.getElementsByTagName('body')[0];
-        title = document.getElementById('title').getElementsByTagName('strong')[0];
         /**
          * Change param to true for cross domain requests
          * e.g. using this script in PhoneGap or using CDN path in AJAX call
@@ -65,8 +56,7 @@ function request(url) {
 function online(data) {
     if (data) {
         // Do something if the user is online
-        background.removeAttribute('class') ? background.removeAttribute('class') : background.removeAttribute('className');
-        title.innerHTML = "online";
+        console.log('Online'); // alert('Online'); // <- Old browser testing
     }
 }
 
@@ -75,6 +65,5 @@ function online(data) {
  */
 function offline() {
     // Do something if the user is offline
-    background.setAttribute('class', 'offline') ? background.setAttribute('class', 'offline') : background.className = 'offline';
-    title.innerHTML = "offline";
+    console.log('Offline'); // alert('Offline'); // <- Old browser testing
 }
