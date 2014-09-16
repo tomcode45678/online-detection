@@ -40,7 +40,7 @@ function onlineCheck(crossDomain) {
 /**
  * Function for online request
  * @param url
- * @returns string JSON
+ * @returns {*}
  */
 function request(url) {
     var call;
@@ -49,13 +49,17 @@ function request(url) {
     } catch (error) {
         call = new XMLHttpRequest();
     }
-    call.open('GET', url, false);
-    try {
-        call.send(null);
-    } catch (error) {
+    call.onload = function() {
+        if (call.readyState === 4) {
+            return online(call.responseText);
+        }
+        return console.error('Unknown status: You may have been abducted by aliens.');
+    };
+    call.open("GET", url, true);
+    call.onerror = function () {
         return offline();
-    }
-    return online(call.responseText);
+    };
+    call.send(null);
 }
 
 /**
